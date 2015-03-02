@@ -11,8 +11,8 @@ This library is designed to create a simple, controllable, reactive popout syste
 The whole idea of this library is that you will wrap a portion of your page in the "Popout", passing the template you want displayed in the popout as an argument. Then, using the session variable defined as the *on* parameter, you can toggle whether it is popped out by changing the session variable from true to false. The data context on the outside of the call to the Popout template is automatically passed to the template specified by the call. There are only three mandatory arguments to the template, and they are shown here.
 
 ```html
-    {{> Popout.Remove template='popout_content' on='removeSessionVar' win=true}}<br>
-    {{> Popout.Duplicate template='popout_content' on='duplicateSessionVar' tab=true}}<br>
+    {{> Popout.Remove template='popout_content' on='removeSessionVar' win=true}}
+    {{> Popout.Duplicate template='popout_content' on='duplicateSessionVar' tab=true}}
 ```
 
 A description of possible parameters is given below.
