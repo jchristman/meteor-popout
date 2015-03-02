@@ -1,4 +1,5 @@
 <body>
+{{#with exampleContext}}
 <b>NOTE: Internet Explorer is hard. Therefore, it is not supported yet. This is verified only on Chrome, Safari, and Firefox</b><br>
 <b>ANOTHER NOTE: Adblock breaks this. You might want to pause it.</b><br><br>
     <div style='border: 1px solid black'>
@@ -21,6 +22,7 @@
         {{> Popout.Duplicate template='popout_content' on='duplicateTabSessionVar' tab=true name='Popout Duplicated Into Tab'}}<br>
         Toggle: <button id='dupTab'>Popout State: {{duplicateTabState}}</button>
     </div>
+{{/with}}
 </body>
 
 <template name="popout_content">

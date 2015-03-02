@@ -32,6 +32,10 @@ if (Meteor.isClient) {
 
     duplicateTabState : function() {
         return Session.get('duplicateTabSessionVar').toString();
+    },
+
+    exampleContext : function() {
+        return { example : 'context' };
     }
   });
 

@@ -4,7 +4,9 @@
             {{newWindow}}
         {{else}}
             {{closeNewWindow}}
-            {{> getTemplate}}
+            {{#with parentContext}}
+                {{> getTemplate}}
+            {{/with}}
         {{/if}}
     {{/with}}
 </template>
@@ -16,7 +18,9 @@
         {{else}}
             {{closeNewWindow}}
         {{/if}}
-        {{> getTemplate}}
+        {{#with parentContext}}
+            {{> getTemplate}}
+        {{/with}}
     {{/with}}
 
 </template>
