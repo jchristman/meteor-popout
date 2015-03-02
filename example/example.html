@@ -1,0 +1,29 @@
+<body>
+    <div style='border: 1px solid black'>
+        This popout will <b>remove</b> the template from this page and put it in a new <b>window</b><br>
+        {{> Popout.Remove template='popout_content' on='removeSessionVar' win=true name='Popout Removed From Page'}}<br>
+        Toggle: <button id='remove'>Popout State: {{removeState}}</button>
+    </div>
+    <div style='border: 1px solid black'>
+        This popout will <b>duplicate</b> the template from this page and put it in a new <b>window</b><br>
+        {{> Popout.Duplicate template='popout_content' on='duplicateSessionVar' win=true name='Popout Duplicated From Page'}}<br>
+        Toggle: <button id='dup'>Popout State: {{duplicateState}}</button>
+    </div>
+    <div style='border: 1px solid black'>
+        This popout will <b>remove</b> the template from this page and put it in a new <b>tab</b><br>
+        {{> Popout.Remove template='popout_content' on='removeTabSessionVar' tab=true name='Popout Removed Into Tab'}}<br>
+        Toggle: <button id='removeTab'>Popout State: {{duplicateState}}</button>
+    </div>
+    <div style='border: 1px solid black'>
+        This popout will <b>duplicate</b> the template from this page and put it in a <b>tab</b><br>
+        {{> Popout.Duplicate template='popout_content' on='duplicateTabSessionVar' tab=true name='Popout Duplicated Into Tab'}}<br>
+        Toggle: <button id='dupTab'>Popout State: {{duplicateState}}</button>
+    </div>
+</body>
+
+<template name="popout_content">
+    <br>
+    Example counter in a popout<br>
+    <button>Increment</button> {{counter}}
+    <br>
+</template>

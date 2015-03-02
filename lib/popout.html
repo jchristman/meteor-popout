@@ -1,0 +1,22 @@
+<template name='_popout_remove'>
+    {{#with check}}
+        {{#if popout}}
+            {{newWindow}}
+        {{else}}
+            {{closeNewWindow}}
+            {{> getTemplate}}
+        {{/if}}
+    {{/with}}
+</template>
+
+<template name='_popout_duplicate'>
+    {{#with check}}
+        {{#if popout}}
+            {{newWindow}}
+        {{else}}
+            {{closeNewWindow}}
+        {{/if}}
+        {{> getTemplate}}
+    {{/with}}
+
+</template>
