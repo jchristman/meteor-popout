@@ -24,6 +24,14 @@ if (Meteor.isClient) {
 
     duplicateState : function() {
         return Session.get('duplicateSessionVar').toString();
+    },
+
+    removeTabState : function() {
+        return Session.get('removeTabSessionVar').toString();
+    },
+
+    duplicateTabState : function() {
+        return Session.get('duplicateTabSessionVar').toString();
     }
   });
 

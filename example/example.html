@@ -1,4 +1,5 @@
 <body>
+<b>NOTE: Internet Explorer is hard. Therefore, it is not supported yet. This is verified only on Chrome, Safari, and Firefox</b><br><br>
     <div style='border: 1px solid black'>
         This popout will <b>remove</b> the template from this page and put it in a new <b>window</b><br>
         {{> Popout.Remove template='popout_content' on='removeSessionVar' win=true name='Popout Removed From Page'}}<br>
@@ -12,12 +13,12 @@
     <div style='border: 1px solid black'>
         This popout will <b>remove</b> the template from this page and put it in a new <b>tab</b><br>
         {{> Popout.Remove template='popout_content' on='removeTabSessionVar' tab=true name='Popout Removed Into Tab'}}<br>
-        Toggle: <button id='removeTab'>Popout State: {{duplicateState}}</button>
+        Toggle: <button id='removeTab'>Popout State: {{removeTabState}}</button>
     </div>
     <div style='border: 1px solid black'>
         This popout will <b>duplicate</b> the template from this page and put it in a <b>tab</b><br>
         {{> Popout.Duplicate template='popout_content' on='duplicateTabSessionVar' tab=true name='Popout Duplicated Into Tab'}}<br>
-        Toggle: <button id='dupTab'>Popout State: {{duplicateState}}</button>
+        Toggle: <button id='dupTab'>Popout State: {{duplicateTabState}}</button>
     </div>
 </body>
 
