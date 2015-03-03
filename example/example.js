@@ -4,6 +4,8 @@ if (Meteor.isClient) {
   Session.setDefault('duplicateSessionVar', false);
   Session.setDefault('removeTabSessionVar', false);
   Session.setDefault('duplicateTabSessionVar', false);
+  Session.setDefault('createWindowSessionVar', false);
+  Session.setDefault('createTabSessionVar', false);
 
   Template.popout_content.helpers({
     counter: function () {
@@ -54,6 +56,31 @@ if (Meteor.isClient) {
     
     'click #dupTab':function() {
         Session.set('duplicateTabSessionVar', !Session.get('duplicateTabSessionVar'));
-    }
+    },
+
+    'click #createWindow':function() {
+        if (this.popout == undefined) {
+            this.popout = new Popout({
+                template : 'popout_content',
+                on : 'createWindowSessionVar',
+                win : true,
+                name : 'Programatically Created New Window'
+            });
+        }
+        this.popout.show();
+    },
+
+    'click #createTab':function() {
+        if (this.popoutTab == undefined) {
+            this.popoutTab = new Popout({
+                template : 'popout_content',
+                on : 'createTabSessionVar',
+                tab : true,
+                name : 'Programatically Created New Tab'
+            });
+        }
+        this.popoutTab.show();
+    },
+
   });
 }

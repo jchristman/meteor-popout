@@ -22,6 +22,14 @@
         {{> Popout.Duplicate template='popout_content' on='duplicateTabSessionVar' tab=true name='Popout Duplicated Into Tab'}}<br>
         Toggle: <button id='dupTab'>Popout State: {{duplicateTabState}}</button>
     </div>
+    <div style='border: 1px solid black'>
+        This popout will <b>programatically create</b> the counter template and put it in a <b>window</b><br>
+        <button id='createWindow'>Create Window</button>
+    </div>
+    <div style='border: 1px solid black'>
+        This popout will <b>programatically create</b> the counter template and put it in a <b>tab</b><br>
+        <button id='createTab'>Create Tab</button>
+    </div>
 {{/with}}
 </body>
 
