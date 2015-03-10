@@ -1,7 +1,7 @@
 Package.describe({
   name: 'jchristman:popout',
   summary: 'Reactive popouts in a new window',
-  version: '1.0.3_1',
+  version: '1.0.4',
   git: 'https://github.com/jchristman/meteor-popout'
 });
 
